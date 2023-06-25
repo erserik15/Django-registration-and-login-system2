@@ -12,7 +12,8 @@ from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm
 def home(request):
     return render(request, 'users/home.html')
 
-
+def index(request):
+    return render(request, '/static/users/index.html')
 class RegisterView(View):
     form_class = RegisterForm
     initial = {'key': 'value'}
